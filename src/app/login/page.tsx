@@ -8,6 +8,12 @@ import { useRouter, useSearchParams } from "next/navigation"
 import { useAuth } from "@/lib/AuthContext"
 import { Suspense } from "react"
 import toast from "react-hot-toast"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Login",
+    description: "Login to your CloudNine account.",
+}
 
 function LoginForm() {
     const [email, setEmail] = useState<string>("")

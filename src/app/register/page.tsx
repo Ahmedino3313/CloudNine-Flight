@@ -6,6 +6,12 @@ import { User, Mail, Lock, Eye, EyeOff, Plane } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import toast from "react-hot-toast"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Register",
+    description: "Create your CloudNine account and start booking flights.",
+}
 
 export default function RegisterPage() {
     const [name, setName] = useState<string>("")
