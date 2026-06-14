@@ -1,0 +1,33 @@
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS flights (
+    id SERIAL PRIMARY KEY,
+    from_city VARCHAR(100) NOT NULL,
+    to_city VARCHAR(100) NOT NULL,
+    from_code VARCHAR(10) NOT NULL,
+    to_code VARCHAR(10) NOT NULL,
+    date VARCHAR(50) NOT NULL,
+    departure_time VARCHAR(20) NOT NULL,
+    arrival_time VARCHAR(20) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    seats INTEGER NOT NULL,
+    airline VARCHAR(100) NOT NULL,
+    image VARCHAR(255) NOT NULL,
+    duration VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS bookings (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+    flight_id INTEGER REFERENCES flights(id) ON DELETE CASCADE,
+    seats INTEGER NOT NULL,
+    total_price DECIMAL(10,2) NOT NULL,
+    status VARCHAR(20) DEFAULT 'confirmed',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
