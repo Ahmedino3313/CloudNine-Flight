@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   keywords: ["flight booking", "cheap flights", "book flights", "CloudNine", "travel", "airlines"],
   authors: [{ name: "CloudNine" }],
   creator: "CloudNine",
-  metadataBase: new URL("https://cloudnine-flight.vercel.app"),
+  metadataBase: new URL("https://cloud-nine-flight.vercel.app"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://cloudnine-flight.vercel.app",
+    url: "https://cloud-nine-flight.vercel.app",
     siteName: "CloudNine",
     title: "CloudNine — Fly Above The Rest",
     description: "Search and book flights to over 500 destinations worldwide. Fast, easy and affordable.",
