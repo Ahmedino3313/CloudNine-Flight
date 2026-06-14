@@ -6,12 +6,6 @@ import { Plane, Calendar, Clock, ArrowRight, LogOut, User } from "lucide-react"
 import { Booking } from "@/types"
 import { useRouter } from "next/navigation"
 import { useAuth } from "@/lib/AuthContext"
-import type { Metadata } from "next"
-
-export const metadata: Metadata = {
-    title: "My Bookings",
-    description: "View and manage all your CloudNine flight bookings.",
-}
 
 function BookingSkeleton() {
     return (

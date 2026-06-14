@@ -8,12 +8,6 @@ import { Plane, MapPin, Calendar, Search, Clock, ArrowRight } from "lucide-react
 import { Flight } from "@/types"
 import Link from "next/link"
 import Image from "next/image"
-import type { Metadata } from "next"
-
-export const metadata: Metadata = {
-    title: "Search Flights",
-    description: "Search and compare flights to hundreds of destinations worldwide.",
-}
 
 const FLIGHTS_PER_PAGE = 6
 
